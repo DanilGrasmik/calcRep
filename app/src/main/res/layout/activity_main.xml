@@ -340,11 +340,4 @@
         app:layout_constraintStart_toStartOf="@+id/backgroundNumbers"
         app:layout_constraintTop_toTopOf="@+id/backgroundNumbers" />
 
-    <TextView
-        android:id="@+id/testOp"
-        android:layout_width="239dp"
-        android:layout_height="72dp"
-        app:layout_constraintStart_toEndOf="@+id/mainText"
-        app:layout_constraintTop_toTopOf="parent" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -37,17 +37,14 @@ class MainActivity : AppCompatActivity() {
                     curNumber.text = num
                     if(currentOperation.isEmpty()) {
                         currentOperation = num
-                        testOp.text = currentOperation
                     }
                     return
                 }
                 curNumber.text = curNumber.text.toString() + num
                 currentOperation += num
-                testOp.text = currentOperation
                 return
             }
             currentOperation += num
-            testOp.text = currentOperation
             curNumber.text = curNumber.text.toString() + num
         }
     }
@@ -60,10 +57,8 @@ class MainActivity : AppCompatActivity() {
             val last: Char = currentOperation[currentOperation.length - 1]
             if (last == '-' || last == '+' || last == '/' || last == '*') {
                 currentOperation = currentOperation.substring(0, currentOperation.length - 1) + op
-                testOp.text = currentOperation
             } else {
                 currentOperation += op
-                testOp.text = currentOperation
             }
         }
         else
@@ -114,7 +109,6 @@ class MainActivity : AppCompatActivity() {
         buttonAC.setOnClickListener{
             curNumber.text = "0"
             currentOperation = ""
-            testOp.text = currentOperation
         }
 
 
@@ -132,12 +126,10 @@ class MainActivity : AppCompatActivity() {
                 val longResult = result.toLong()
                 if(result == longResult.toDouble()){
                     currentOperation = longResult.toString()
-                    testOp.text = currentOperation
                     curNumber.text = currentOperation
                 }
                 else{
                     currentOperation = result.toString()
-                    testOp.text = currentOperation
                     curNumber.text = currentOperation
                 }
             } catch (e:Exception) {
