@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Calc2</string>
+    <string name="mainText">Calculator</string>
+    <string name="backPanelNumbers">8888888888</string>
+    <string name="butAC">AC</string>
+    <string name="butSign">+/-</string>
+    <string name="butPercent">%</string>
+    <string name="but0">0</string>
+    <string name="but1">1</string>
+    <string name="but2">2</string>
+    <string name="but3">3</string>
+    <string name="but4">4</string>
+    <string name="but5">5</string>
+    <string name="but6">6</string>
+    <string name="but7">7</string>
+    <string name="but8">8</string>
+    <string name="but9">9</string>
+    <string name="butPlus">+</string>
+    <string name="butMinus">-</string>
+    <string name="butEquals">=</string>
+    <string name="butMultiply">X</string>
+    <string name="butDivide">÷</string>
+    <string name="butComma">,</string>
+    <string name="initialNumber">0</string>
+</resources>
