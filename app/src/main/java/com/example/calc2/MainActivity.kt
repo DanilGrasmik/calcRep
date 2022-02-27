@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
 
     fun inputButtonNum(num: String):Unit{
         val str = curNumber.text.toString()
+        val isComma = str.indexOf('.')
 
        if(currentOperation.length > 0 && (currentOperation[currentOperation.lastIndex] == '-' || currentOperation[currentOperation.lastIndex] == '*' || currentOperation[currentOperation.lastIndex] == '/' || currentOperation[currentOperation.lastIndex] == '+')){
            curNumber.text = ""
@@ -40,23 +41,19 @@ class MainActivity : AppCompatActivity() {
                     }
                     return
                 }
+                if(isComma == -1) {
+                    curNumber.text = curNumber.text.toString() + num
+                    currentOperation += num
+                    return
+                }
+                }
+            if(num == "." && isComma == -1 || num != ".") {
                 curNumber.text = curNumber.text.toString() + num
                 currentOperation += num
                 return
             }
-            if(num != ".") {
-                currentOperation += num
-                curNumber.text = curNumber.text.toString() + num
-            }
-            else{
-                if(str.length > 0 && str[str.lastIndex] == '.'){
-                    return
                 }
-                curNumber.text = curNumber.text.toString() + num
-                currentOperation += num
-            }
         }
-    }
 
 
     fun inputButtonOperator(op: Char){
@@ -122,6 +119,7 @@ class MainActivity : AppCompatActivity() {
 
 
         buttonEquals.setOnClickListener{
+
             if(currentOperation.length > 1){
                 if(currentOperation[currentOperation.length - 2] == '/' && currentOperation[currentOperation.length - 1] == '0'){
                     curNumber.text = "ERROR"
