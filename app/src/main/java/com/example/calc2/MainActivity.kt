@@ -44,8 +44,17 @@ class MainActivity : AppCompatActivity() {
                 currentOperation += num
                 return
             }
-            currentOperation += num
-            curNumber.text = curNumber.text.toString() + num
+            if(num != ".") {
+                currentOperation += num
+                curNumber.text = curNumber.text.toString() + num
+            }
+            else{
+                if(str.length > 0 && str[str.lastIndex] == '.'){
+                    return
+                }
+                curNumber.text = curNumber.text.toString() + num
+                currentOperation += num
+            }
         }
     }
 
