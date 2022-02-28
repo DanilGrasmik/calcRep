@@ -145,15 +145,22 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-        buttonSign.setOnClickListener{
-            val temp: String = curNumber.text.toString()
-            if(temp[0] == '-'){
-                curNumber.text = temp.substring(1, temp.length)
-                currentOperation = currentOperation.substring(0, currentOperation.length - temp.length) + curNumber.text.toString()
-            }
-            else{
-                curNumber.text = "-" + temp
-                currentOperation = currentOperation.substring(0, currentOperation.length - temp.length) + curNumber.text.toString()
+        buttonSign.setOnClickListener {
+            if (curNumber.text != "0") {
+                val temp: String = curNumber.text.toString()
+                if (temp[0] == '-') {
+                    curNumber.text = temp.substring(1, temp.length)
+                    currentOperation = currentOperation.substring(
+                        0,
+                        currentOperation.length - temp.length
+                    ) + curNumber.text.toString()
+                } else {
+                    curNumber.text = "-" + temp
+                    currentOperation = currentOperation.substring(
+                        0,
+                        currentOperation.length - temp.length
+                    ) + curNumber.text.toString()
+                }
             }
         }
     }
