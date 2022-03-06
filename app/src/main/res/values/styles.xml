@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="WhiteButton">
+    <style name="whiteButton">
         <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">80dp</item>
-        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:fontFamily">@font/montserratbold</item>
         <item name="android:textColor">@color/blueButton</item>
         <item name="android:textSize">27dp</item>
         <item name="android:background">@drawable/white_round_buttons</item>
@@ -12,10 +12,10 @@
         <item name="android:translationZ">4dp</item>
     </style>
 
-    <style name="BlueButton">
+    <style name="blueButton">
         <item name="android:layout_width">80dp</item>
         <item name="android:layout_height">80dp</item>
-        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:fontFamily">@font/montserratbold</item>
         <item name="android:textColor">@color/backgroundApp</item>
         <item name="android:textSize">27dp</item>
         <item name="android:background">@drawable/blue_round_button</item>
@@ -24,10 +24,10 @@
         <item name="android:translationZ">4dp</item>
     </style>
 
-    <style name="WhiteWideButton">
+    <style name="whiteWideButton">
         <item name="android:layout_width">175dp</item>
         <item name="android:layout_height">80dp</item>
-        <item name="fontFamily">@font/montserratbold</item>
+        <item name="android:fontFamily">@font/montserratbold</item>
         <item name="android:textColor">@color/blueButton</item>
         <item name="android:textSize">27dp</item>
         <item name="android:background">@drawable/white_round_buttons</item>

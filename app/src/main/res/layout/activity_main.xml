@@ -60,7 +60,7 @@
 
     <Button
         android:id="@+id/buttonAC"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:layout_marginTop="24dp"
         android:text="@string/butAC"
         app:backgroundTint="@null"
@@ -74,8 +74,7 @@
 
     <Button
         android:id="@+id/buttonSign"
-        style="@style/WhiteButton"
-        android:layout_width="wrap_content"
+        style="@style/whiteButton"
         android:layout_marginTop="25dp"
         android:layout_marginStart="119dp"
         android:layout_marginEnd="212dp"
@@ -90,7 +89,7 @@
 
     <Button
         android:id="@+id/buttonPercent"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:text="@string/butPercent"
         android:layout_marginBottom="443dp"
         android:layout_marginStart="215dp"
@@ -104,7 +103,7 @@
 
     <Button
         android:id="@+id/button1"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:text="@string/but1"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp"
@@ -118,7 +117,7 @@
 
     <Button
         android:id="@+id/button2"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:text="@string/but2"
         android:layout_marginTop="16dp"
         android:layout_marginStart="119dp"
@@ -132,7 +131,7 @@
 
     <Button
         android:id="@+id/button3"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:layout_marginTop="16dp"
         android:layout_marginStart="215dp"
         android:layout_marginEnd="116dp"
@@ -146,7 +145,7 @@
 
     <Button
         android:id="@+id/button4"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:text="@string/but4"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp"
@@ -160,7 +159,7 @@
 
     <Button
         android:id="@+id/button5"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:text="@string/but5"
         android:layout_marginTop="16dp"
         android:layout_marginStart="119dp"
@@ -174,7 +173,7 @@
 
     <Button
         android:id="@+id/button6"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:text="@string/but6"
         android:layout_marginTop="16dp"
         android:layout_marginStart="215dp"
@@ -188,7 +187,7 @@
 
     <Button
         android:id="@+id/button7"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:text="@string/but7"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp"
@@ -202,7 +201,7 @@
 
     <Button
         android:id="@+id/button8"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:text="@string/but8"
         android:layout_marginTop="16dp"
         android:layout_marginStart="119dp"
@@ -216,7 +215,7 @@
 
     <Button
         android:id="@+id/button9"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:text="@string/but9"
         android:layout_marginTop="16dp"
         android:layout_marginStart="215dp"
@@ -230,7 +229,7 @@
 
     <Button
         android:id="@+id/buttonComma"
-        style="@style/WhiteButton"
+        style="@style/whiteButton"
         android:layout_marginTop="16dp"
         android:layout_marginStart="215dp"
         android:layout_marginEnd="116dp"
@@ -244,7 +243,7 @@
 
     <Button
         android:id="@+id/buttonDivide"
-        style="@style/BlueButton"
+        style="@style/blueButton"
         android:text="@string/butDivide"
         android:textSize="43sp"
         android:layout_marginTop="25dp"
@@ -259,7 +258,7 @@
 
     <Button
         android:id="@+id/buttonMultiply"
-        style="@style/BlueButton"
+        style="@style/blueButton"
         android:text="@string/butMultiply"
         android:layout_marginTop="16dp"
         android:layout_marginStart="309dp"
@@ -273,7 +272,7 @@
 
     <Button
         android:id="@+id/buttonMinus"
-        style="@style/BlueButton"
+        style="@style/blueButton"
         android:text="@string/butMinus"
         android:textSize="45sp"
         android:layout_marginTop="16dp"
@@ -288,7 +287,7 @@
 
     <Button
         android:id="@+id/buttonEquals"
-        style="@style/BlueButton"
+        style="@style/blueButton"
         android:text="@string/butEquals"
         android:layout_marginTop="16dp"
         android:layout_marginStart="309dp"
@@ -302,7 +301,7 @@
 
     <Button
         android:id="@+id/buttonPlus"
-        style="@style/BlueButton"
+        style="@style/blueButton"
         android:text="@string/butPlus"
         android:layout_marginTop="16dp"
         android:layout_marginStart="309dp"
@@ -316,7 +315,7 @@
 
     <Button
         android:id="@+id/button0"
-        style="@style/WhiteWideButton"
+        style="@style/whiteWideButton"
         android:text="@string/but0"
         android:layout_marginTop="16dp"
         android:layout_marginStart="24dp"

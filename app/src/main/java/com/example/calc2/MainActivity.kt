@@ -1,27 +1,23 @@
 package com.example.calc2
 
 import android.annotation.SuppressLint
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.service.autofill.OnClickAction
 import android.util.Log
 import android.view.View
-import android.view.Window
-import android.view.WindowManager
-import android.widget.Button
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import net.objecthunter.exp4j.ExpressionBuilder
 
 class MainActivity : AppCompatActivity() {
 //string where library counts the result of operations
-    var currentOperation: String = ""
+private var currentOperation: String = ""
 
-    fun inputButtonNum(num: String):Unit{
+    @SuppressLint("SetTextI18n")
+    fun inputButtonNum(num: String) {
         val str = curNumber.text.toString()
         val isComma = str.indexOf('.')
 
-       if(currentOperation.length > 0 && (currentOperation[currentOperation.lastIndex] == '-' || currentOperation[currentOperation.lastIndex] == '*' || currentOperation[currentOperation.lastIndex] == '/' || currentOperation[currentOperation.lastIndex] == '+')){
+       if(currentOperation.isNotEmpty() && (currentOperation[currentOperation.lastIndex] == '-' || currentOperation[currentOperation.lastIndex] == '*' || currentOperation[currentOperation.lastIndex] == '/' || currentOperation[currentOperation.lastIndex] == '+')){
            curNumber.text = ""
        }
 
@@ -56,10 +52,10 @@ class MainActivity : AppCompatActivity() {
         }
 
 
-    fun inputButtonOperator(op: Char){
+    private fun inputButtonOperator(op: Char){
         buttonEquals.callOnClick()
 
-        if(currentOperation.length > 0) {
+        if(currentOperation.isNotEmpty()) {
             val last: Char = currentOperation[currentOperation.length - 1]
             if (last == '-' || last == '+' || last == '/' || last == '*') {
                 currentOperation = currentOperation.substring(0, currentOperation.length - 1) + op
@@ -69,15 +65,17 @@ class MainActivity : AppCompatActivity() {
         }
         else
         {
-            currentOperation = "0" + op
+            currentOperation = "0$op"
         }
     }
 
 
+    @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        window.decorView.apply {
-            systemUiVisibility = View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
+        val apply = window.decorView.apply {
+            systemUiVisibility =
+                View.SYSTEM_UI_FLAG_HIDE_NAVIGATION or View.SYSTEM_UI_FLAG_FULLSCREEN
         }
         setContentView(R.layout.activity_main)
 
@@ -103,7 +101,7 @@ class MainActivity : AppCompatActivity() {
         buttonPercent.setOnClickListener{
             if(curNumber.text != "0") {
                 val recentLen: Int = curNumber.text.length
-                var temp: Double = curNumber.text.toString().toDouble() * 0.01
+                val temp: Double = curNumber.text.toString().toDouble() * 0.01
                 curNumber.text = temp.toString()
                 currentOperation = currentOperation.substring(0,
                     currentOperation.length - recentLen
@@ -155,7 +153,7 @@ class MainActivity : AppCompatActivity() {
                         currentOperation.length - temp.length
                     ) + curNumber.text.toString()
                 } else {
-                    curNumber.text = "-" + temp
+                    curNumber.text = "-$temp"
                     currentOperation = currentOperation.substring(
                         0,
                         currentOperation.length - temp.length
